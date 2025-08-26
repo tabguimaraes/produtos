@@ -9,8 +9,6 @@ const elemento = {
   avaliacoes: document.querySelectorAll(".avaliacoes"),
 };
 
-console.log(elemento.avaliacoes);
-
 let produtos = [];
 
 async function carregarProdutos() {
@@ -21,10 +19,14 @@ async function carregarProdutos() {
     }
     produtos = await response.json();
     produtos.forEach((item) => {
-      criarCardProduto(item.nome, item.preco, item.imagem, item.categoria);
+      criarCardProduto(
+        item.nome,
+        item.preco,
+        item.imagem,
+        item.categoria,
+        item.classificacao,
+      );
     });
-
-    console.log(produtos);
   } catch (error) {
     console.error("Ocorreu um problema:", error);
   }
@@ -32,7 +34,7 @@ async function carregarProdutos() {
 
 carregarProdutos();
 
-function criarCardProduto(nome, preco, src, categoria) {
+function criarCardProduto(nome, preco, src, categoria, classificacao) {
   let section = document.createElement("section");
   section.classList.add("grid", "grid-cols-2", "justify-between", "p-4");
 
@@ -79,6 +81,37 @@ function criarCardProduto(nome, preco, src, categoria) {
   span.classList.add("text-sm", "text-[#00a650]");
   span.innerText = "Frete Grátis";
 
+  let avaliacoes = document.createElement("span");
+  avaliacoes.innerText = "Avaliações:";
+
+  let containerAvaliacoes = document.createElement("div");
+  containerAvaliacoes.classList.add(
+    "avaliacoes",
+    "my-4",
+    "flex",
+    "justify-center",
+    "gap-1",
+  );
+
+  let maxAvaliacao = 5;
+  if (classificacao <= maxAvaliacao) {
+    while (classificacao <= maxAvaliacao) {
+      let estrela = document.createElement("img");
+      estrela.src = "./assets/img/estrela.svg";
+      estrela.classList.add(
+        "estrela",
+        "w-6",
+        "transition",
+        "hover:scale-[130%]",
+        "hover:cursor-pointer",
+      );
+      containerAvaliacoes.appendChild(estrela);
+      maxAvaliacao--;
+    }
+  }
+
+  avaliacoes.appendChild(containerAvaliacoes);
+
   let button = document.createElement("button");
   button.classList.add(
     "rounded-lg",
@@ -94,7 +127,7 @@ function criarCardProduto(nome, preco, src, categoria) {
   );
   button.innerText = "COMPRAR";
 
-  div.append(h2, h3, p, span, button);
+  div.append(h2, h3, p, span, avaliacoes, button);
 
   section.append(picture, div);
 
