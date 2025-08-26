@@ -4,7 +4,7 @@
     "nome": "Notebook Dell Inspiron 15 3000",
     "descricao": "Notebook com processador Intel Core i5, 8GB de RAM e 256GB de SSD",
     "preco": 3999.99,
-    "imagem": "notebook-dell-inspiron-15-3000.png",
+    "imagem": "./assets/img/notebook-dell-inspiron-15-3000.png",
     "categoria": "Informática",
     "classificacao": 2
   },
@@ -13,7 +13,7 @@
     "nome": "Monitor Samsung LED 23.8 polegadas",
     "descricao": "Monitor LED com resolução Full HD e tempo de resposta de 5ms",
     "preco": 799.99,
-    "imagem": "monitor-samsung-led-23.8.png",
+    "imagem": "./assets/img/monitor-samsung-led-23.8.png",
     "categoria": "Informática",
     "classificacao": 4
   },
@@ -22,7 +22,7 @@
     "nome": "Mouse Gamer Logitech G Pro",
     "descricao": "Mouse com sensor HERO 25K, 6 botões programáveis e 16000 DPI",
     "preco": 299.99,
-    "imagem": "mouse-gamer-logitech-g-pro.png",
+    "imagem": "./assets/img/mouse-gamer-logitech-g-pro.png",
     "categoria": "Informática",
     "classificacao": 2
   },
@@ -31,7 +31,7 @@
     "nome": "Teclado Mecânico Redragon Kumara",
     "descricao": "Teclado mecânico com switches Outemu Blue e iluminação em LED",
     "preco": 219.99,
-    "imagem": "teclado-mecanico-redragon-kumara.png",
+    "imagem": "./assets/img/teclado-mecanico-redragon-kumara.png",
     "categoria": "Informática",
     "classificacao": 5
   },
@@ -40,7 +40,7 @@
     "nome": "Smartphone Samsung Galaxy S21",
     "descricao": "Smartphone com tela de 6.2 polegadas, processador Exynos 2100 e câmera de 64 MP",
     "preco": 5999.99,
-    "imagem": "smartphone-samsung-galaxy-s21.png",
+    "imagem": "./assets/img/smartphone-samsung-galaxy-s21.png",
     "categoria": "Informática",
     "classificacao": 5
   },
@@ -49,7 +49,7 @@
     "nome": "Tablet Apple iPad Pro",
     "descricao": "Tablet com tela de 11 polegadas, processador A12Z Bionic e câmera de 12 MP",
     "preco": 8499.99,
-    "imagem": "tablet-apple-ipad-pro.png",
+    "imagem": "./assets/img/tablet-apple-ipad-pro.png",
     "categoria": "Informática",
     "classificacao": 4
   },
@@ -58,7 +58,7 @@
     "nome": "Caixa de Som JBL Flip 5",
     "descricao": "Caixa de som portátil com Bluetooth, resistente à água e bateria com duração de até 12 horas",
     "preco": 499.99,
-    "imagem": "caixa-de-som-jbl-flip-5.png",
+    "imagem": "./assets/img/caixa-de-som-jbl-flip-5.png",
     "categoria": "Eletrônicos",
     "classificacao": 3
   },
@@ -67,7 +67,7 @@
     "nome": "Fone de Ouvido Bluetooth JBL Tune 500BT",
     "descricao": "Fone de ouvido com conectividade Bluetooth, bateria com duração de até 16 horas e microfone integrado",
     "preco": 299.99,
-    "imagem": "fone-de-ouvido-bluetooth-jbl-tune-500bt.png",
+    "imagem": "./assets/img/fone-de-ouvido-bluetooth-jbl-tune-500bt.png",
     "categoria": "Eletrônicos",
     "classificacao": 4
   },
@@ -76,7 +76,7 @@
     "nome": "Smartwatch Samsung Galaxy Watch 3",
     "descricao": "Smartwatch com tela de 1.4 polegadas, GPS integrado e bateria com duração de até 56 horas",
     "preco": 2799.99,
-    "imagem": "smartwatch-samsung-galaxy-watch-3.png",
+    "imagem": "./assets/img/smartwatch-samsung-galaxy-watch-3.png",
     "categoria": "Eletrônicos",
     "classificacao": 4
   },
@@ -85,7 +85,7 @@
     "nome": "Câmera Sony Alpha a7 III",
     "descricao": "Câmera mirrorless com sensor full-frame de 24.2 MP, estabilização de imagem de 5 eixos e gravação de vídeo em 4K",
     "preco": 12999.99,
-    "imagem": "camera-sony-alpha-a7-iii.png",
+    "imagem": "./assets/img/camera-sony-alpha-a7-iii.png",
     "categoria": "Eletrônicos",
     "classificacao": 4
   }
