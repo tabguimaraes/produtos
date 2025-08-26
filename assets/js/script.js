@@ -1,3 +1,9 @@
+/* PENDÊNCIAS:
+
+- Criar um campo de Avalie! sobre o nome do produto, com 5 estrelas - Complexidade: fácil
+- Ao carregar a página, será exibido a avaliação inicial, porém ao passar o mouse sobre o campo de avaliação, o usuário poderá re-avaliar o produto clicando na quantidade desejada de estrelas. - Complexidade: médio / difícil
+*/
+
 const elemento = {
   containerProdutos: document.querySelector(".containerProdutos"),
 };
