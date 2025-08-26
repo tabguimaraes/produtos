@@ -6,7 +6,10 @@
 
 const elemento = {
   containerProdutos: document.querySelector(".containerProdutos"),
+  avaliacoes: document.querySelectorAll(".avaliacoes"),
 };
+
+console.log(elemento.avaliacoes);
 
 let produtos = [];
 
