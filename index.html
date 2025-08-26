@@ -9,42 +9,48 @@
   </head>
   <body class="bg-[#ebebeb]">
     <nav
-      class="flex h-[100px] w-[390px] flex-wrap items-center justify-around gap-2.5 bg-[#ffe600] p-3"
+      class="flex h-[100px] w-[390px] flex-wrap items-center justify-around gap-2.5 bg-[#ffe600] p-3 *:transition xl:w-full xl:justify-between"
     >
-      <img class="size-8" src="./assets/img/loja-alt.png" alt="" />
+      <img
+        class="size-8 cursor-pointer hover:scale-120"
+        src="./assets/img/loja-alt.png"
+        alt=""
+      />
       <input
-        class="w-50 bg-amber-50 p-2"
+        class="w-50 rounded bg-amber-50 p-2 xl:w-5/6"
         type="text"
         placeholder="🔍 Estou buscando..."
       />
       <img
-        class="size-8"
+        class="size-8 cursor-pointer hover:scale-120"
         src="./assets/img/cardapio-hamburguer.png"
         alt=""
         srcset=""
       />
       <img
-        class="size-8"
+        class="size-8 cursor-pointer hover:scale-120"
         src="./assets/img/carrinho-de-compras-rapido.png"
         alt=""
         srcset=""
       />
-      <div class="z-10 grid w-full grid-cols-2 py-2">
+      <div class="z-10 grid w-full grid-cols-2 py-2 *:transition">
         <p class="flex items-center gap-4">
           <img
-            class="size-4 w-fit"
+            class="size-4 w-fit cursor-pointer hover:scale-120 hover:animate-bounce"
             src="./assets/img/verificacao-do-marcador-de-mapa.png"
             alt=""
             srcset=""
           />Informe seu CEP
         </p>
-        <span class="text-right text-2xl">></span>
+        <span class="cursor-pointer text-right text-2xl hover:animate-bounce"
+          >></span
+        >
       </div>
     </nav>
     <main class="grid grid-cols-2 px-3">
       <header class="col-span-full mt-4 rounded-2xl">
         <img
-          class="rounded-2xl shadow-[0px_0px_7px_29px_rgba(255,230,0,1)]"
+          class="cursor-pointer rounded-2xl shadow-[0px_0px_7px_29px_rgba(255,230,0,1)]"
           src="./assets/img/Slideshow_Feature_Banner__D_copy.webp"
           alt=""
         />
@@ -54,7 +60,9 @@
         produtos a partir de R$ 19.
       </p>
       <div class="col-span-full content-center py-4">
-        <section class="flex justify-evenly">
+        <section
+          class="flex justify-evenly *:transition *:hover:scale-110 *:hover:cursor-pointer"
+        >
           <div class="flex flex-col items-center justify-center gap-2">
             <picture class="rounded-full bg-white p-3">
               <img
@@ -112,33 +120,212 @@
           </div>
         </section>
       </div>
-      <div class="col-span-full flex flex-col gap-10 bg-white">
-        <h1 class="border-b-2 border-b-[#ebebeb] p-3 text-xl font-semibold">
-          Ofertas
-        </h1>
-        <div class="flex justify-between border-b-2 border-b-[#ebebeb] p-4">
+      <div
+        class="col-span-full flex flex-col gap-0.5 *:bg-white xl:grid xl:grid-cols-3 xl:gap-1"
+      >
+        <h1 class="p-3 text-xl font-semibold xl:col-span-full">Ofertas</h1>
+        <div class="flex justify-between p-4">
           <picture
-            ><img class="size-40" src="assets/img/caixa-de-som-jbl-flip-5.png"
+            ><img
+              class="size-40 transition hover:scale-105 hover:cursor-pointer"
+              src="assets/img/caixa-de-som-jbl-flip-5.png"
           /></picture>
           <div class="flex flex-col gap-2 px-6">
             <h2>Caixa de Som JBL</h2>
             <h3 class="text-xl font-bold">R$ 694,00</h3>
             <p class="text-sm">10x R$ 69,40</p>
             <span class="text-sm text-[#00a650]">Frete Grátis</span>
+            <button
+              class="rounded-lg bg-blue-500 px-4 py-2 font-semibold text-white transition hover:scale-105 hover:cursor-pointer hover:bg-blue-600"
+            >
+              COMPRAR
+            </button>
           </div>
         </div>
-        <div class="flex justify-between border-b-2 border-b-[#ebebeb] p-4">
+        <div class="flex justify-between p-4">
           <picture
-            ><img class="size-40" src="assets/img/caixa-de-som-jbl-flip-5.png"
+            ><img
+              class="size-40 transition hover:scale-105 hover:cursor-pointer"
+              src="assets/img/caixa-de-som-jbl-flip-5.png"
           /></picture>
           <div class="flex flex-col gap-2 px-6">
             <h2>Caixa de Som JBL</h2>
             <h3 class="text-xl font-bold">R$ 694,00</h3>
             <p class="text-sm">10x R$ 69,40</p>
             <span class="text-sm text-[#00a650]">Frete Grátis</span>
+            <button
+              class="rounded-lg bg-blue-500 px-4 py-2 font-semibold text-white transition hover:scale-105 hover:cursor-pointer hover:bg-blue-600"
+            >
+              COMPRAR
+            </button>
+          </div>
+        </div>
+        <div class="flex justify-between p-4">
+          <picture
+            ><img
+              class="size-40 transition hover:scale-105 hover:cursor-pointer"
+              src="assets/img/caixa-de-som-jbl-flip-5.png"
+          /></picture>
+          <div class="flex flex-col gap-2 px-6">
+            <h2>Caixa de Som JBL</h2>
+            <h3 class="text-xl font-bold">R$ 694,00</h3>
+            <p class="text-sm">10x R$ 69,40</p>
+            <span class="text-sm text-[#00a650]">Frete Grátis</span>
+            <button
+              class="rounded-lg bg-blue-500 px-4 py-2 font-semibold text-white transition hover:scale-105 hover:cursor-pointer hover:bg-blue-600"
+            >
+              COMPRAR
+            </button>
+          </div>
+        </div>
+        <div class="flex justify-between p-4">
+          <picture
+            ><img
+              class="size-40 transition hover:scale-105 hover:cursor-pointer"
+              src="assets/img/caixa-de-som-jbl-flip-5.png"
+          /></picture>
+          <div class="flex flex-col gap-2 px-6">
+            <h2>Caixa de Som JBL</h2>
+            <h3 class="text-xl font-bold">R$ 694,00</h3>
+            <p class="text-sm">10x R$ 69,40</p>
+            <span class="text-sm text-[#00a650]">Frete Grátis</span>
+            <button
+              class="rounded-lg bg-blue-500 px-4 py-2 font-semibold text-white transition hover:scale-105 hover:cursor-pointer hover:bg-blue-600"
+            >
+              COMPRAR
+            </button>
+          </div>
+        </div>
+        <div class="flex justify-between p-4">
+          <picture
+            ><img
+              class="size-40 transition hover:scale-105 hover:cursor-pointer"
+              src="assets/img/caixa-de-som-jbl-flip-5.png"
+          /></picture>
+          <div class="flex flex-col gap-2 px-6">
+            <h2>Caixa de Som JBL</h2>
+            <h3 class="text-xl font-bold">R$ 694,00</h3>
+            <p class="text-sm">10x R$ 69,40</p>
+            <span class="text-sm text-[#00a650]">Frete Grátis</span>
+            <button
+              class="rounded-lg bg-blue-500 px-4 py-2 font-semibold text-white transition hover:scale-105 hover:cursor-pointer hover:bg-blue-600"
+            >
+              COMPRAR
+            </button>
+          </div>
+        </div>
+        <div class="flex justify-between p-4">
+          <picture
+            ><img
+              class="size-40 transition hover:scale-105 hover:cursor-pointer"
+              src="assets/img/caixa-de-som-jbl-flip-5.png"
+          /></picture>
+          <div class="flex flex-col gap-2 px-6">
+            <h2>Caixa de Som JBL</h2>
+            <h3 class="text-xl font-bold">R$ 694,00</h3>
+            <p class="text-sm">10x R$ 69,40</p>
+            <span class="text-sm text-[#00a650]">Frete Grátis</span>
+            <button
+              class="rounded-lg bg-blue-500 px-4 py-2 font-semibold text-white transition hover:scale-105 hover:cursor-pointer hover:bg-blue-600"
+            >
+              COMPRAR
+            </button>
+          </div>
+        </div>
+        <div class="flex justify-between p-4">
+          <picture
+            ><img
+              class="size-40 transition hover:scale-105 hover:cursor-pointer"
+              src="assets/img/caixa-de-som-jbl-flip-5.png"
+          /></picture>
+          <div class="flex flex-col gap-2 px-6">
+            <h2>Caixa de Som JBL</h2>
+            <h3 class="text-xl font-bold">R$ 694,00</h3>
+            <p class="text-sm">10x R$ 69,40</p>
+            <span class="text-sm text-[#00a650]">Frete Grátis</span>
+            <button
+              class="rounded-lg bg-blue-500 px-4 py-2 font-semibold text-white transition hover:scale-105 hover:cursor-pointer hover:bg-blue-600"
+            >
+              COMPRAR
+            </button>
+          </div>
+        </div>
+        <div class="flex justify-between p-4">
+          <picture
+            ><img
+              class="size-40 transition hover:scale-105 hover:cursor-pointer"
+              src="assets/img/caixa-de-som-jbl-flip-5.png"
+          /></picture>
+          <div class="flex flex-col gap-2 px-6">
+            <h2>Caixa de Som JBL</h2>
+            <h3 class="text-xl font-bold">R$ 694,00</h3>
+            <p class="text-sm">10x R$ 69,40</p>
+            <span class="text-sm text-[#00a650]">Frete Grátis</span>
+            <button
+              class="rounded-lg bg-blue-500 px-4 py-2 font-semibold text-white transition hover:scale-105 hover:cursor-pointer hover:bg-blue-600"
+            >
+              COMPRAR
+            </button>
+          </div>
+        </div>
+        <div class="flex justify-between p-4">
+          <picture
+            ><img
+              class="size-40 transition hover:scale-105 hover:cursor-pointer"
+              src="assets/img/caixa-de-som-jbl-flip-5.png"
+          /></picture>
+          <div class="flex flex-col gap-2 px-6">
+            <h2>Caixa de Som JBL</h2>
+            <h3 class="text-xl font-bold">R$ 694,00</h3>
+            <p class="text-sm">10x R$ 69,40</p>
+            <span class="text-sm text-[#00a650]">Frete Grátis</span>
+            <button
+              class="rounded-lg bg-blue-500 px-4 py-2 font-semibold text-white transition hover:scale-105 hover:cursor-pointer hover:bg-blue-600"
+            >
+              COMPRAR
+            </button>
           </div>
         </div>
       </div>
     </main>
+    <section
+      class="my-4 flex h-[300px] w-full flex-col items-center justify-center bg-white p-4"
+    >
+      <picture
+        ><img
+          class="size-24"
+          src="./assets/img/cartao-de-credito.png"
+          alt=""
+          srcset=""
+      /></picture>
+      <div class="*:text-center">
+        <h2 class="mb-2 text-2xl">Escolha como pagar</h2>
+        <p class="mb-6">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eum
+          mollitia fugiat
+        </p>
+        <p>Como pagar usando seu cartão</p>
+      </div>
+    </section>
+    <p class="mb-2 px-3 text-justify text-sm">
+      * Frete grátis aplicável em produtos selecionados com a etiqueta, na
+      modalidade de entrega "Seu dia de entregas" e sujeito a condições.
+      Consulte os Frete grátis aplicável em produtos selecionados com a
+      etiqueta, na modalidade de entrega "Seu dia de entregas" e sujeito a
+      condições. Consulte os Termos e condições.
+      <span class="text-blue-700">Termos e condições</span>.
+    </p>
+    <footer
+      class="flex h-[100px] w-full items-center justify-center bg-[#ffe600] p-3"
+    >
+      <div class="flex items-center gap-2">
+        <img
+          class="size-16 cursor-pointer rounded border-2 border-transparent p-3 shadow-xl"
+          src="./assets/img/loja-alt.png"
+          alt=""
+        />
+        <h2>Compre e Venda pelo nosso app!</h2>
+      </div>
+    </footer>
   </body>
 </html>
