@@ -386,6 +386,10 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
   .border-b-1 {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
@@ -393,6 +397,18 @@
   .border-b-2 {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 2px;
+  }
+  .border-b-\[\#454545\] {
+    border-bottom-color: #454545;
+  }
+  .border-b-\[\#525252\] {
+    border-bottom-color: #525252;
+  }
+  .border-b-\[\#ebebeb\] {
+    border-bottom-color: #ebebeb;
+  }
+  .border-b-black {
+    border-bottom-color: var(--color-black);
   }
   .bg-\[\#ebebeb\] {
     background-color: #ebebeb;
