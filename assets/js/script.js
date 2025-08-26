@@ -1,5 +1,3 @@
-console.log("OK");
-
 const elemento = {
   containerProdutos: document.querySelector(".containerProdutos"),
 };
@@ -18,7 +16,6 @@ async function carregarProdutos() {
     });
 
     console.log(produtos);
-    // listarProdutos(produtos);
   } catch (error) {
     console.error("Ocorreu um problema:", error);
   }
@@ -26,20 +23,15 @@ async function carregarProdutos() {
 
 carregarProdutos();
 
-// function listarProdutos(produto) {
-//   produto.forEach((elemento) => {
-//     console.log(elemento.id);
-//   });
-// }
-
 function criarCardProduto(nome, preco, src, categoria) {
   let section = document.createElement("section");
-  section.classList.add("flex", "justify-between", "p-4");
+  section.classList.add("grid", "grid-cols-2", "justify-between", "p-4");
 
   let picture = document.createElement("picture");
+  picture.classList.add("flex", "items-center");
   let img = document.createElement("img");
   img.classList.add(
-    "size-40",
+    "w-fit",
     "transition",
     "hover:scale-105",
     "hover:cursor-pointer",
@@ -47,18 +39,28 @@ function criarCardProduto(nome, preco, src, categoria) {
   img.src = src;
   picture.appendChild(img);
 
-  //USAR APPEND PARA ADD TODOS AO MSM TEMPO
-  //   section.appendChild(picture);
-
   let div = document.createElement("div");
-  div.classList.add("flex", "flex-col", "gap-2", "px-6");
+  div.classList.add(
+    "place-self-end",
+    "flex",
+    "flex-col",
+    "gap-2",
+    "justify-between",
+    "xl:w-[150px]",
+  );
 
   let h2 = document.createElement("h2");
   h2.innerText = nome;
 
   let h3 = document.createElement("h3");
   h3.classList.add("text-xl", "font-bold");
-  h3.innerHTML = preco;
+
+  let precoAjustado = preco;
+
+  h3.innerHTML = precoAjustado.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  });
 
   let p = document.createElement("p");
   p.classList.add("text-sm");

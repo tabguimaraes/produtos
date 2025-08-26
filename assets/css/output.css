@@ -256,6 +256,10 @@
     width: calc(var(--spacing) * 40);
     height: calc(var(--spacing) * 40);
   }
+  .size-auto {
+    width: auto;
+    height: auto;
+  }
   .h-\[50px\] {
     height: 50px;
   }
@@ -273,6 +277,12 @@
   }
   .h-\[400px\] {
     height: 400px;
+  }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
+  .w-1\/2 {
+    width: calc(1/2 * 100%);
   }
   .w-50 {
     width: calc(var(--spacing) * 50);
@@ -315,6 +325,9 @@
   }
   .flex-wrap {
     flex-wrap: wrap;
+  }
+  .place-items-center {
+    place-items: center;
   }
   .content-center {
     align-content: center;
@@ -363,6 +376,9 @@
   }
   .gap-\[0\.5px\] {
     gap: 0.5px;
+  }
+  .place-self-end {
+    place-self: end;
   }
   .rounded {
     border-radius: 0.25rem;
@@ -425,6 +441,9 @@
   }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .object-contain {
+    object-fit: contain;
   }
   .p-2 {
     padding: calc(var(--spacing) * 2);
@@ -521,6 +540,11 @@
   .\*\:text-center {
     :is(& > *) {
       text-align: center;
+    }
+  }
+  .\*\:text-right {
+    :is(& > *) {
+      text-align: right;
     }
   }
   .\*\:transition {
@@ -651,6 +675,21 @@
   .xl\:w-5\/6 {
     @media (width >= 80rem) {
       width: calc(5/6 * 100%);
+    }
+  }
+  .xl\:w-\[100px\] {
+    @media (width >= 80rem) {
+      width: 100px;
+    }
+  }
+  .xl\:w-\[150px\] {
+    @media (width >= 80rem) {
+      width: 150px;
+    }
+  }
+  .xl\:w-\[200px\] {
+    @media (width >= 80rem) {
+      width: 200px;
     }
   }
   .xl\:w-full {
