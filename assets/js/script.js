@@ -1,12 +1,6 @@
-/* PENDÊNCIAS:
-
-- Criar um campo de Avalie! sobre o nome do produto, com 5 estrelas - Complexidade: fácil - FEITO
-- Ao carregar a página, será exibido a avaliação inicial, porém ao passar o mouse sobre o campo de avaliação, o usuário poderá re-avaliar o produto clicando na quantidade desejada de estrelas. - Complexidade: médio / difícil
-- Criar uma caixa de texto dentro do card para que ao passar o mouse sobre a imagem do produto, carregue a descrição dele. Complexidade: Médio / Difícil 
-*/
-
 const elemento = {
   containerProdutos: document.querySelector(".containerProdutos"),
+  cardItem: document.getElementsByClassName("card-item"),
   avaliacoes: document.querySelectorAll(".avaliacoes"),
 };
 
@@ -35,6 +29,34 @@ async function carregarProdutos() {
   }
 }
 
+const tooltip = document.createElement("div");
+tooltip.className =
+  "absolute z-50 bg-gray-800 text-white text-sm px-2 py-1 rounded-lg shadow-lg hidden";
+document.body.appendChild(tooltip);
+
+elemento.containerProdutos.addEventListener("mouseover", (e) => {
+  const img = e.target.closest("img");
+  if (img && img.dataset.descricao) {
+    tooltip.textContent = img.dataset.descricao;
+    tooltip.classList.remove("hidden");
+
+    document.addEventListener("mousemove", moverTooltip);
+  }
+});
+
+elemento.containerProdutos.addEventListener("mouseout", (e) => {
+  const img = e.target.closest("img");
+  if (img && img.dataset.descricao) {
+    tooltip.classList.add("hidden");
+    document.removeEventListener("mousemove", moverTooltip);
+  }
+});
+
+function moverTooltip(e) {
+  tooltip.style.left = e.pageX + 15 + "px";
+  tooltip.style.top = e.pageY + 15 + "px";
+}
+
 carregarProdutos();
 
 function criarCardProduto(
@@ -47,7 +69,13 @@ function criarCardProduto(
   classificacao,
 ) {
   let card = document.createElement("section");
-  card.classList.add("grid", "grid-cols-2", "justify-between", "p-4");
+  card.classList.add(
+    "card-item",
+    "grid",
+    "grid-cols-2",
+    "justify-between",
+    "p-4",
+  );
 
   if (id === 1) {
     card.classList.add("xl:col-span-full", "xl:p-8");
@@ -55,6 +83,7 @@ function criarCardProduto(
 
   let picture = document.createElement("picture");
   picture.classList.add("flex", "items-center");
+
   let img = document.createElement("img");
   img.classList.add(
     "w-fit",
@@ -63,6 +92,7 @@ function criarCardProduto(
     "hover:cursor-pointer",
   );
   img.src = src;
+  img.dataset.descricao = descricao;
   picture.appendChild(img);
 
   let div = document.createElement("div");
