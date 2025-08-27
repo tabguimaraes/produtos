@@ -143,7 +143,7 @@ function criarCardProduto(
 
     while (index < classificacao) {
       let estrela = document.createElement("img");
-      estrela.src = "./assets/img/estrela.svg";
+      estrela.src = "./assets/icons/estrela.svg";
       estrela.classList.add(
         "estrela",
         "w-6",
