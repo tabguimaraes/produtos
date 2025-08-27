@@ -20,7 +20,7 @@
 
 ### Desktop
 
-![](image-2.png)
+![](image.png)
 
 #
 
