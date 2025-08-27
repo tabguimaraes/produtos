@@ -54,19 +54,18 @@
         />
       </div>
     </header>
-
     <main
-      class="grid w-[70%] grid-cols-2 place-self-center px-3 xl:grid-cols-3"
+      class="grid grid-cols-1 place-self-center px-4 py-8 xl:w-[70%] xl:grid-cols-3"
     >
       <p
-        class="col-span-full mt-12 rounded bg-white py-2 text-center text-sm xl:text-2xl"
+        class="rounded bg-white py-4 text-center text-xs xl:col-span-full xl:text-2xl"
       >
         <a href="#frete" class="text-[#00a650]">🚚 Frete grátis</a> em milhões
         de produtos a partir de R$ 19.
       </p>
-      <div class="col-span-full content-center py-4">
+      <div class="col-span-full content-center py-8">
         <section
-          class="flex justify-evenly *:transition *:hover:scale-110 *:hover:cursor-pointer"
+          class="flex justify-evenly *:text-xs *:transition *:hover:scale-110 *:hover:cursor-pointer"
         >
           <div class="flex flex-col items-center justify-center gap-2">
             <picture class="rounded-full bg-white p-3">
@@ -125,14 +124,18 @@
           </div>
         </section>
       </div>
-      <div class="col-span-full flex flex-col xl:grid xl:grid-cols-3 xl:gap-4">
-        <h1 class="rounded bg-white p-3 text-xl font-semibold xl:col-span-full">
+      <div
+        class="flex flex-col xl:col-span-full xl:grid xl:grid-cols-3 xl:gap-4"
+      >
+        <h1
+          class="mb-4 rounded bg-white p-4 text-xl font-semibold xl:col-span-full"
+        >
           Ofertas
         </h1>
         <section
-          class="containerProdutos grid gap-4 *:rounded-xl *:bg-white *:text-right xl:col-span-full xl:grid-cols-3"
+          class="containerProdutos grid gap-4 *:rounded *:bg-white *:text-right xl:col-span-full xl:grid-cols-3"
         >
-          <section class="grid grid-cols-2 justify-between p-8">
+          <section class="grid grid-cols-2 justify-between p-4">
             <picture class="flex items-center"
               ><img
                 class="w-fit transition hover:scale-105 hover:cursor-pointer"
@@ -207,7 +210,7 @@
         <p>Como pagar usando seu cartão</p>
       </div>
     </section>
-    <p id="frete" class="mb-2 px-3 text-justify text-sm">
+    <p id="frete" class="px-4 pt-2 pb-4 text-justify text-sm">
       * Frete grátis aplicável em produtos selecionados com a etiqueta, na
       modalidade de entrega "Seu dia de entregas" e sujeito a condições.
       Consulte os Frete grátis aplicável em produtos selecionados com a
@@ -217,7 +220,7 @@
       >.
     </p>
     <footer
-      class="flex h-[100px] w-full items-center justify-center bg-[#ffe600] p-3"
+      class="flex h-[100px] w-full items-center justify-center bg-[#ffe600] p-4"
     >
       <div class="flex items-center gap-2">
         <img
