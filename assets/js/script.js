@@ -1,7 +1,8 @@
 /* PENDÊNCIAS:
 
-- Criar um campo de Avalie! sobre o nome do produto, com 5 estrelas - Complexidade: fácil
+- Criar um campo de Avalie! sobre o nome do produto, com 5 estrelas - Complexidade: fácil - FEITO
 - Ao carregar a página, será exibido a avaliação inicial, porém ao passar o mouse sobre o campo de avaliação, o usuário poderá re-avaliar o produto clicando na quantidade desejada de estrelas. - Complexidade: médio / difícil
+- Criar uma caixa de texto dentro do card para que ao passar o mouse sobre a imagem do produto, carregue a descrição dele. Complexidade: Médio / Difícil 
 */
 
 const elemento = {
