@@ -20,7 +20,9 @@ async function carregarProdutos() {
     produtos = await response.json();
     produtos.forEach((item) => {
       criarCardProduto(
+        item.id,
         item.nome,
+        item.descricao,
         item.preco,
         item.imagem,
         item.categoria,
@@ -34,9 +36,21 @@ async function carregarProdutos() {
 
 carregarProdutos();
 
-function criarCardProduto(nome, preco, src, categoria, classificacao) {
+function criarCardProduto(
+  id,
+  nome,
+  descricao,
+  preco,
+  src,
+  categoria,
+  classificacao,
+) {
   let card = document.createElement("section");
   card.classList.add("grid", "grid-cols-2", "justify-between", "p-4");
+
+  if (id === 1) {
+    card.classList.add("xl:col-span-full", "xl:p-8");
+  }
 
   let picture = document.createElement("picture");
   picture.classList.add("flex", "items-center");
