@@ -35,8 +35,8 @@ async function carregarProdutos() {
 carregarProdutos();
 
 function criarCardProduto(nome, preco, src, categoria, classificacao) {
-  let section = document.createElement("section");
-  section.classList.add("grid", "grid-cols-2", "justify-between", "p-4");
+  let card = document.createElement("section");
+  card.classList.add("grid", "grid-cols-2", "justify-between", "p-4");
 
   let picture = document.createElement("picture");
   picture.classList.add("flex", "items-center");
@@ -129,7 +129,7 @@ function criarCardProduto(nome, preco, src, categoria, classificacao) {
 
   div.append(h2, h3, p, span, avaliacoes, button);
 
-  section.append(picture, div);
+  card.append(picture, div);
 
-  elemento.containerProdutos.append(section);
+  elemento.containerProdutos.append(card);
 }
