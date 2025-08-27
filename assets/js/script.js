@@ -107,9 +107,10 @@ function criarCardProduto(
     "gap-1",
   );
 
-  let maxAvaliacao = 5;
-  if (classificacao <= maxAvaliacao) {
-    while (classificacao <= maxAvaliacao) {
+  function inserirAvaliacao(classificacao) {
+    let index = 0;
+
+    while (index < classificacao) {
       let estrela = document.createElement("img");
       estrela.src = "./assets/img/estrela.svg";
       estrela.classList.add(
@@ -120,11 +121,12 @@ function criarCardProduto(
         "hover:cursor-pointer",
       );
       containerAvaliacoes.appendChild(estrela);
-      maxAvaliacao--;
+      avaliacoes.appendChild(containerAvaliacoes);
+      index++;
     }
   }
 
-  avaliacoes.appendChild(containerAvaliacoes);
+  inserirAvaliacao(classificacao);
 
   let button = document.createElement("button");
   button.classList.add(
