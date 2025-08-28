@@ -75,25 +75,22 @@ function criarCardProduto(
     "grid-cols-2",
     "justify-between",
     "p-4",
+    "grid-row-2",
+    "xl:grid-row-1",
   );
 
   let picture = document.createElement("picture");
   picture.classList.add("flex", "items-center");
 
   let img = document.createElement("img");
-  img.classList.add(
-    "transition",
-    "hover:scale-105",
-    "hover:cursor-pointer",
-    "md:max-w-[250px]",
-  );
+  img.classList.add("transition", "hover:scale-105", "hover:cursor-pointer");
   img.src = src;
   img.dataset.descricao = descricao;
   picture.appendChild(img);
 
   let div = document.createElement("div");
   div.classList.add(
-    "place-self-end",
+    "justify-center",
     "flex",
     "flex-col",
     "gap-2",
@@ -168,6 +165,7 @@ function criarCardProduto(
     "hover:scale-105",
     "hover:cursor-pointer",
     "hover:bg-blue-600",
+    "col-span-full",
   );
   button.innerText = "COMPRAR";
 
@@ -175,12 +173,11 @@ function criarCardProduto(
     card.classList.add("xl:col-span-full", "xl:p-8");
     picture.classList.add("justify-center");
     img.classList.add("md:w-full");
-    img.classList.remove("md:max-w-[250px]");
   }
 
-  div.append(h2, h3, p, span, avaliacoes, button);
+  div.append(h2, h3, p, span, avaliacoes);
 
-  card.append(picture, div);
+  card.append(picture, div, button);
 
   elemento.containerProdutos.append(card);
 }
