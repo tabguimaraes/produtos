@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@tailwindcss/cli": "^4.1.12",
+    "express": "^5.1.0",
     "tailwindcss": "^4.1.12"
   },
   "devDependencies": {

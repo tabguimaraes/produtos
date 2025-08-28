@@ -75,6 +75,7 @@ function criarCardProduto(
     "grid-cols-2",
     "justify-between",
     "p-4",
+    "md:h-[300px]",
   );
 
   if (id === 1) {
@@ -90,6 +91,7 @@ function criarCardProduto(
     "transition",
     "hover:scale-105",
     "hover:cursor-pointer",
+    "md:max-w-[250px]",
   );
   img.src = src;
   img.dataset.descricao = descricao;
@@ -102,6 +104,7 @@ function criarCardProduto(
     "flex-col",
     "gap-2",
     "justify-between",
+    "w-[90%]",
     "xl:w-[150px]",
   );
 
@@ -134,7 +137,7 @@ function criarCardProduto(
     "avaliacoes",
     "my-4",
     "flex",
-    "justify-center",
+    "justify-end",
     "gap-1",
   );
 
