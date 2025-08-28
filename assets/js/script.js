@@ -75,19 +75,13 @@ function criarCardProduto(
     "grid-cols-2",
     "justify-between",
     "p-4",
-    "md:h-[300px]",
   );
-
-  if (id === 1) {
-    card.classList.add("xl:col-span-full", "xl:p-8");
-  }
 
   let picture = document.createElement("picture");
   picture.classList.add("flex", "items-center");
 
   let img = document.createElement("img");
   img.classList.add(
-    "w-fit",
     "transition",
     "hover:scale-105",
     "hover:cursor-pointer",
@@ -176,6 +170,13 @@ function criarCardProduto(
     "hover:bg-blue-600",
   );
   button.innerText = "COMPRAR";
+
+  if (id === 1) {
+    card.classList.add("xl:col-span-full", "xl:p-8");
+    picture.classList.add("justify-center");
+    img.classList.add("md:w-full");
+    img.classList.remove("md:max-w-[250px]");
+  }
 
   div.append(h2, h3, p, span, avaliacoes, button);
 
